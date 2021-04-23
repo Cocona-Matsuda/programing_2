@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main (void){
-    int x[3];
+    int m[3];
 
     return 0;
 }
