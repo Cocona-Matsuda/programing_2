@@ -11,7 +11,7 @@ int main (void){
     {
         for ( i = 0; i < count; i++)
         {
-            printf("")
+
         }
         
         printf("%d",i);
