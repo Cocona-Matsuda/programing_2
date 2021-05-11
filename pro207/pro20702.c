@@ -1,28 +1,26 @@
 #include <stdio.h>
 #include <string.h>
 
+int add(int x, int y){
+    int r;
+    r = x + y;
+    return r;
+}
+
 int main (void){
-    char name[100];
-    char name2[100];
-    char ans[] ="masaki";
-    int i;
+    int x;
+    int y;
+    int result;
 
-    printf("名前：");
-    scanf("%s",name);
+    printf("整数１：");
+    scanf("%d", &x);
 
-    strcpy(name2, name);
-    i = 0;
-    while(name[i] != '\0'){
-        if(name[i] >= 'A' && name[i] <= 'Z'){
-            name[i] = name[i] + ('a' - 'A');
-        }
-        i++;
-    }
-    if (strcmp(name, ans) == 0){
-        printf("あなたは%sです\n",name2);
-    }else{
-        printf("あなたは違う人です。\n");
-    }
+    printf("整数２：");
+    scanf("%d", &y);
+
+    result = add(x, y);
+
+    printf("合計値は%dです。\n", result);
 
     return 0;
 }
