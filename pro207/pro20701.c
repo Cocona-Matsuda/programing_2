@@ -1,20 +1,24 @@
 #include <stdio.h>
 #include <string.h>
 
+int db (int x){
+    int d;
+
+    d = 2 * x;
+
+    return d;
+}
+
 int main (void){
-    char name1[100];
-    char name2[100];
+    int n;
+    int result;
 
-    printf("名前１：");
-    scanf("%s",name1);
-    printf("名前２：");
-    scanf("%s",name2);
+    printf("整数：");
+    scanf("%d", &n);
 
-    if (strncmp(name1, name2, 4) == 0){
-        printf("よく似た名前です。\n");
-    }else{
-        printf("似ていない名前です。\n");
-    }
+    result = db(n);
+
+    printf("２倍にした値は%dです\n", result);
 
     return 0;
 }
