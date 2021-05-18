@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
+// 関数のプロトタイプ宣言
+void hoge(int n);
+
 int main (void){
     int i;
 
@@ -11,7 +14,11 @@ int main (void){
 
     return 0;
 }
-
+/*
+    pro20805のプログラムから
+    mainとhogeを入れ替えたので、
+    プロトタイプ宣言を
+*/
 void hoge(int n){
     int i;
 
