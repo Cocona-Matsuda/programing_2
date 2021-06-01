@@ -5,20 +5,25 @@ void SuujiInput(int i, char str[]);
 int suuji(char s[]);
 int seisuu(char s[]);
 int StringPlus(char str1[], char str2[]);
+int StringInputPlus(void);
 
 int main(void) {
+    int goukei;
+
+    goukei = StringInputPlus();
+
+    printf("合計： %d\n", goukei);
+
+    return 0;
+}
+int StringInputPlus(void){
     char str1[100];
     char str2[100];
-    int goukei;
 
     SuujiInput(1, str1);
     SuujiInput(2, str2);
 
-    goukei = StringPlus(str1, str2);
-
-    printf("%s + %s = %d\n", str1, str2, goukei);
-
-    return 0;
+    return (StringPlus(str1,str2));
 }
 void SuujiInput(int i, char str[]) {
     while (1) {
