@@ -124,7 +124,6 @@ static DATA *createData(void){
 }
 static void printData(DATA *head){
     DATA *temp;
-    int count;
     temp = head;
 
     if ((head == NULL) && (tail == NULL))
@@ -134,7 +133,6 @@ static void printData(DATA *head){
 
     printf("\n表示するね。\n");
     temp = head;
-    count = 0;
 
     printf("-------------------------------------\n");
     while (temp != NULL)
@@ -144,7 +142,6 @@ static void printData(DATA *head){
         printf("-------------------------------------\n");
 
         temp = temp->next;
-        count++;
     }
     return;
 }
