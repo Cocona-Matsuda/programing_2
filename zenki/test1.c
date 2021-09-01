@@ -82,10 +82,10 @@ int main (void){
 }
 static DATA *createData(void){
     DATA *head, *temp, *prev;
-    char buf[20], name[20];
-    int id, count;
+    char name[20];
+    int id = 0;
 
-    printf("入力してね！（終わる時は %d を送って）\n", DATA_CREATE_EXIT);
+    printf("入力してね！（終わる時は %d を送ってね）\n", DATA_CREATE_EXIT);
 
     head = NULL;
     temp = NULL;
@@ -94,8 +94,8 @@ static DATA *createData(void){
     while (1)
     {
         printf("番号教えて：");
-        fgets(buf, sizeof(buf), stdin);
-        id = atoi(buf);
+
+        scanf("%d", &id);
 
         if (id == DATA_CREATE_EXIT)
         {
@@ -106,8 +106,9 @@ static DATA *createData(void){
         temp->id = id;
 
         printf("名前は何？:");
-        fgets(name, sizeof(name), stdin);
+        scanf("%s", name);
         strcpy(temp->name, name);
+
         temp->next = NULL;
 
         if (head == NULL)
@@ -136,11 +137,11 @@ static void printData(DATA *head){
     count = 0;
 
     printf("-------------------------------------\n");
-
     while (temp != NULL)
     {
         printf("学籍番号    : %d\n", temp->id);
         printf("名前        : %s\n", temp->name);
+        printf("-------------------------------------\n");
 
         temp = temp->next;
         count++;
