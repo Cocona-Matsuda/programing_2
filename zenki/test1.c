@@ -48,7 +48,7 @@ static DATA *sortData(DATA *head);
 static DATA * deleteData(DATA *head);
 
 int main (void){
-    DATA *head;
+    // DATA *head;
     int input;
     head = NULL;
 
@@ -81,13 +81,12 @@ int main (void){
     }    return 0;
 }
 static DATA *createData(void){
-    DATA *head, *temp, *prev;
+    DATA *temp, *prev;
     char name[20];
     int id = 0;
 
     printf("入力してね！（終わる時は %d を送ってね）\n", DATA_CREATE_EXIT);
 
-    head = NULL;
     temp = NULL;
     prev = NULL;
 
@@ -128,7 +127,8 @@ static void printData(DATA *head){
 
     if ((head == NULL) && (tail == NULL))
     {
-        printf("誰もいないみたい");
+        printf("誰もいないみたい\n");
+        return;
     }
 
     printf("\n表示するね。\n");
