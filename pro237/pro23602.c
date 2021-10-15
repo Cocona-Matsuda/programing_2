@@ -11,7 +11,7 @@ int main (void){
     printf("身長：");
     scanf("%d", &cm);
 
-    bmi = kg / ( (float)(cm) / 100 * (float)(cm) / 100 );
+    bmi = kg / ( (float)cm / 100 * (float)cm / 100 );
 
     printf("貴方のBMI値は %gです\n", bmi);
 
