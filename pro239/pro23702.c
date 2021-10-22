@@ -10,7 +10,7 @@ int main (void){
     scanf("%d", &n);
 
     // 動的確保
-    p = (char *)mamlloc(sizeof(char) * n);
+    p = (char *)malloc(sizeof(char) * n);
     if (p == NULL){
         printf("動的確保に失敗\n");
         exit(EXIT_FAILURE);
